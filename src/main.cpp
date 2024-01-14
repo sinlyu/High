@@ -32,8 +32,7 @@ High::OpenGL::VertexArray::Unbind();
 */
 
 int main() {
-    const auto app = High::Core::Application();
-    app.Run();
+    High::Core::Application().Run();
     return 0;
 }
 
