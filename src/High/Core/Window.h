@@ -28,6 +28,7 @@ namespace High::Core
         [[nodiscard]] int GetWidth() const;
         [[nodiscard]] int GetHeight() const;
 
+        void SetSize(const int width, const int height);
         void OnUpdate() const;
 
     private:

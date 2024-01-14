@@ -18,8 +18,10 @@ namespace High::Core
         m_Context->Init();
 
         // sub to viewport resize
-        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, const int width, const int height) {
-            //QueueEvent(EventType::WindowResize, new WindowResizeEvent(width, height));
+        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* nativeWindow, const int newWidth, const int newHeight) {
+            // TODO: Implement Event System
+            Application::GetInstance()->GetWindow()->SetSize(newWidth, newHeight);
+            Application::GetInstance()->OnWindowResize(newWidth, newHeight);
         });
 
         glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
@@ -43,6 +45,11 @@ namespace High::Core
 
     int Window::GetHeight() const {
         return m_Height;
+    }
+
+    void Window::SetSize(const int width, const int height) {
+        m_Width = width;
+        m_Height = height;
     }
 
     void Window::OnUpdate() const {

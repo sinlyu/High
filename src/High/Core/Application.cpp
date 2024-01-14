@@ -1,7 +1,6 @@
 #include "Application.h"
 
 namespace High::Core {
-
     Application* Application::s_Instance = nullptr;
 
     Application::Application() {
@@ -29,5 +28,14 @@ namespace High::Core {
 
     void Application::OnWindowClose() {
         m_Running = false;
+    }
+
+    void Application::OnWindowResize(const int width, const int height) {
+        // TODO: Move to Framebuffer
+        glViewport(0, 0, width, height);
+    }
+
+    Window* Application::GetWindow() const {
+        return m_Window;
     }
 }

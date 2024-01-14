@@ -1,4 +1,3 @@
-#include "High/Core/Base.h"
 #include "High/Core/Application.h"
 
 

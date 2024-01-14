@@ -7,8 +7,11 @@ namespace High::Core {
         Application();
         ~Application();
         void Run() const;
-        void OnWindowClose();
 
+        void OnWindowClose();
+        void OnWindowResize(const int width, const int height);
+
+        [[nodiscard]] Window* GetWindow() const;
         [[nodiscard]] static Application *GetInstance();
     private:
         static Application *s_Instance;
