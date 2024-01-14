@@ -2,8 +2,8 @@
 #include <string>
 #include <utility>
 
+#include "Base.h"
 #include "../OpenGL/Context.h"
-#include "GLFW/glfw3.h"
 
 namespace High::Core
 {

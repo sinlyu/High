@@ -8,7 +8,7 @@ namespace High::OpenGL {
         ~VertexArray();
 
         void Bind() const;
-        void AddVertexBuffer(const VertexBuffer* vertexBuffer);
+        void AddVertexBuffer(const VertexBuffer* vertexBuffer) const;
 
         static void Unbind();
 

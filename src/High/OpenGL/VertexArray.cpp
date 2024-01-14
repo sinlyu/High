@@ -1,6 +1,5 @@
+#include "../Core/Base.h"
 #include "VertexArray.h"
-
-#include <glad/glad.h>
 
 namespace High::OpenGL {
     VertexArray::VertexArray() {
@@ -15,7 +14,7 @@ namespace High::OpenGL {
         glBindVertexArray(m_RendererID);
     }
 
-    void VertexArray::AddVertexBuffer(const VertexBuffer* vertexBuffer) {
+    void VertexArray::AddVertexBuffer(const VertexBuffer* vertexBuffer) const {
         glBindVertexArray(m_RendererID);
         vertexBuffer->Bind();
     }
@@ -23,6 +22,4 @@ namespace High::OpenGL {
     void VertexArray::Unbind() {
         glBindVertexArray(0);
     }
-
-
 }

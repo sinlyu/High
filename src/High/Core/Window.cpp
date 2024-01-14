@@ -1,7 +1,5 @@
 #include "Window.h"
-
-#include <iostream>
-#include <ostream>
+#include "Application.h"
 
 namespace High::Core
 {
@@ -26,9 +24,8 @@ namespace High::Core
 
         glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
         {
-            WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-            WindowCloseEvent event;
-            data.EventCallback(event);
+            // TODO: Implement Event System
+            Application::GetInstance()->OnWindowClose();
         });
     }
 

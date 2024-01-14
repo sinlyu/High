@@ -1,7 +1,5 @@
+#include "../Core/Base.h"
 #include "ShaderProgram.h"
-
-#include <glad/glad.h>
-
 #include "Shader.h"
 
 namespace High::OpenGL {

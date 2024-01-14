@@ -3,9 +3,7 @@
 //
 
 #include "VertexBuffer.h"
-
-#include <iostream>
-#include <glad/glad.h>
+#include "../Core/Base.h"
 
 namespace High::OpenGL {
     VertexBuffer::VertexBuffer(const uint32_t size) {

@@ -1,7 +1,5 @@
+#include "../Core/Base.h"
 #include "Shader.h"
-
-#include <iostream>
-#include <glad/glad.h>
 
 namespace High::OpenGL {
     Shader::Shader(const ShaderType shaderType) {

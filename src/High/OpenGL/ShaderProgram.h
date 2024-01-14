@@ -1,6 +1,5 @@
 #pragma once
 #include "Shader.h"
-#include "../../../vendor/GLFW/src/internal.h"
 
 namespace High::OpenGL {
     class ShaderProgram {

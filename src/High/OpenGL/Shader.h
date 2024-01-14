@@ -1,7 +1,4 @@
 #pragma once
-#include <cstdint>
-
-#include "../../../vendor/GLFW/src/internal.h"
 
 namespace High::OpenGL {
     enum class ShaderType {
