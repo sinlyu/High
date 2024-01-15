@@ -18,5 +18,5 @@ namespace High::Events {
         int m_Width;
         int m_Height;
     };
-} // High
+}
 

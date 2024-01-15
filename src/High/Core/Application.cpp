@@ -5,6 +5,7 @@ namespace High::Core {
 
     Application::Application() {
         s_Instance = this;
+
         // TODO: Pass window properties to Window::Create()
         m_Window = Window::Create(WindowProps());
 

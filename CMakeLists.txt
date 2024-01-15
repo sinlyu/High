@@ -6,9 +6,11 @@ set(CMAKE_SCRIPTS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake/scripts)
 
 include_directories(vendor/glad/include)
 include_directories(vendor/GLFW/include)
+include_directories(vendor/glm)
 
 # Add the GLFW directory
 add_subdirectory(vendor/GLFW)
+add_subdirectory(vendor/glm)
 
 # Add glad
 add_library(glad vendor/glad/src/glad.c)
@@ -61,7 +63,9 @@ add_executable(High src/main.cpp
         src/High/OpenGL/Context.h
         src/High/Core/Application.cpp
         src/High/Core/Application.h
-        src/High/Core/Assertions.h)
+        src/High/Core/Assertions.h
+        src/High/OpenGL/Renderer2D.cpp
+        src/High/OpenGL/Renderer2D.h)
 
 # Link glad to the executable
-target_link_libraries(High glfw glad ${OPENGL_gl_LIBRARY})
+target_link_libraries(High glfw glad glm ${OPENGL_gl_LIBRARY})

@@ -6,5 +6,21 @@
 
 #include <iostream>
 #include <ostream>
+#include <sstream>
+
+#include <cstdint>
+#include <utility>
+
+#include <memory>
+#include <algorithm>
+#include <functional>
+
+#include <string>
+#include <array>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+
+#include <glm/glm.hpp>
 
 #include "Assertions.h"

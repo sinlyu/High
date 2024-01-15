@@ -9,7 +9,7 @@ namespace High::Core {
         void Run() const;
 
         void OnWindowClose();
-        void OnWindowResize(const int width, const int height);
+        void OnWindowResize(int width, int height);
 
         [[nodiscard]] Window* GetWindow() const;
         [[nodiscard]] static Application *GetInstance();

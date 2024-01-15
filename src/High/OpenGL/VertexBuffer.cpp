@@ -20,6 +20,14 @@ namespace High::OpenGL {
         glBindBuffer(GL_ARRAY_BUFFER, m_RendererID);
     }
 
+    BufferLayout& VertexBuffer::GetLayout() {
+        return m_Layout;
+    }
+
+    void VertexBuffer::SetLayout(const BufferLayout &layout) {
+        m_Layout = layout;
+    }
+
     void VertexBuffer::Unbind() {
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }

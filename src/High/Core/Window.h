@@ -33,7 +33,7 @@ namespace High::Core
 
     private:
         static void Init();
-    private:
+
         GLFWwindow* m_Window;
         int m_Width;
         int m_Height;

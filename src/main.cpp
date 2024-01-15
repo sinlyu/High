@@ -1,5 +1,5 @@
 #include "High/Core/Application.h"
-
+#include "High/Shaders/Generated/Scene.frag.h"
 
 /*
 *const float vertices[] = {

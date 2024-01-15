@@ -17,13 +17,12 @@ namespace High::Core
         m_Context = new OpenGL::Context(m_Window);
         m_Context->Init();
 
-        // sub to viewport resize
-        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* nativeWindow, const int newWidth, const int newHeight) {
+        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* _, const int newWidth, const int newHeight) {
             Application::GetInstance()->GetWindow()->SetSize(newWidth, newHeight);
             Application::GetInstance()->OnWindowResize(newWidth, newHeight);
         });
 
-        glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+        glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* _)
         {
             Application::GetInstance()->OnWindowClose();
         });
@@ -57,7 +56,7 @@ namespace High::Core
     }
 
     void Window::Init() {
-        glfwInit();
+        VERIFY(glfwInit());
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
