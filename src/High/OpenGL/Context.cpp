@@ -8,10 +8,7 @@ namespace High::OpenGL {
 
     void Context::Init() const {
         glfwMakeContextCurrent(m_NativeWindow);
-        int status = gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress));
-
-        // TODO: Check if gladLoadGLLoader failed
-        // TODO: Implement proper logging
+        VERIFY(gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)));
 
         std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
         std::cout << "OpenGL vendor: " << glGetString(GL_VENDOR) << std::endl;

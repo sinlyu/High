@@ -35,7 +35,7 @@ namespace High::Core
         return m_Window;
     }
 
-    Window* Window::Create(const WindowProps& props) {
+    Window* Window::Create(const WindowProps &props) {
         return new Window(props.Title, props.Width, props.Height);
     }
 
