@@ -16,5 +16,8 @@ namespace High::OpenGL {
         static void EndScene();
 
         static void Submit(const Shader& shader, const VertexArray& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+
+    private:
+        glm::mat4 m_ViewProjectionMatrix = {};
     };
 }

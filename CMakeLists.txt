@@ -65,7 +65,9 @@ add_executable(High src/main.cpp
         src/High/Core/Application.h
         src/High/Core/Assertions.h
         src/High/OpenGL/Renderer2D.cpp
-        src/High/OpenGL/Renderer2D.h)
+        src/High/OpenGL/Renderer2D.h
+        src/High/OpenGL/Texture.cpp
+        src/High/OpenGL/Texture.h)
 
 # Link glad to the executable
 target_link_libraries(High glfw glad glm ${OPENGL_gl_LIBRARY})
